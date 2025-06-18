@@ -18,3 +18,20 @@ for c in tabuleiro:
         print()
     posicao = c[1]
     print(c[0], end='')
+print()
+
+posicao_x = int(input('x = '))
+posicao_y = int(input('y = '))
+
+for c in tabuleiro:
+    if c[1] == posicao_x:
+        if c[2] == posicao_y:
+            c[0] = '\033[35mo \033[0m'
+
+posicao = 0
+for c in tabuleiro:
+    if posicao != c[1]:
+        print()
+    posicao = c[1]
+    print(c[0], end='')
+print()
