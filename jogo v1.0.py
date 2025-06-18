@@ -21,20 +21,22 @@ for c in tabuleiro:
 print('')
 print('')
 
-posicao_x = int(input('x = '))
-posicao_y = int(input('y = '))
 
-while True:
+
+posicao = 0
+while posicao == 0:
+    posicao_x = int(input('x = '))
+    posicao_y = int(input('y = '))
     for c in tabuleiro:
-        print(c[0], '1')
         if c[1] == posicao_x:
-            print(c[0], '2')
             if c[2] == posicao_y:
-                print(c[0], '3')
-                if c[0] == 'o ' or c[0] == '\033[35mo \033[0m':
-                    print(c[0], '4')
-                    break
-                    c[0] = '\033[35mo \033[0m'
+                if c[0] == 'o ':
+                    posicao = c
+                    c[0] = '\033[35mo \033[m'
+                else:
+                    print('')
+                    print('Posição invalida.')
+                    print('')
 
 
 
