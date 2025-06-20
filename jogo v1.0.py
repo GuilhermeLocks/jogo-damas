@@ -1,6 +1,6 @@
-fundo = '= '
-jogador = 'o '
-computador = 'x '
+fundo = '=  '
+jogador = 'o  '
+computador = 'x  '
 tabuleiro = [
     [fundo, 8, 1], [computador, 8, 2], [fundo, 8, 3], [computador, 8, 4], [fundo, 8, 5], [computador, 8, 6], [fundo, 8, 7], [computador, 8, 8],
     [computador, 7, 1], [fundo, 7, 2], [computador, 7, 3], [fundo, 7, 4], [computador, 7, 5], [fundo, 7, 6], [computador, 7, 7], [fundo, 7, 8],
@@ -27,19 +27,34 @@ while posicao == 0:
     for c in tabuleiro:
         if c[1] == posicao_x:
             if c[2] == posicao_y:
-                if c[0] == 'o ':
-                    posicao = c
-                    c[0] = '\033[35mo \033[m'
-                    print(c)
+                if c[0] == 'o  ':
+                    posicao = c[:]
+                    c[0] = '\033[35m{}\033[0m'.format(c[0])
+                    print(c, posicao)
                 else:
                     print('')
                     print('Posição invalida.')
                     print('')
 
-posicao = 0
 for c in tabuleiro:
     if posicao != c[1]:
         print()
     posicao = c[1]
     print(c[0], end='')
 print()
+
+print(posicao_x, posicao_y, posicao)
+for c in tabuleiro:
+    if c[1] == posicao_x:
+        if c[2] == posicao_y:
+            if c[0] == 'o  ':
+                c = posicao[:]
+                print(c)
+
+for c in tabuleiro:
+    if posicao != c[1]:
+        print()
+    posicao = c[1]
+    print(c[0], end='')
+print()
+
