@@ -21,38 +21,56 @@ for c in tabuleiro:
 print('')
 print('')
 
-posicao = 0
-while posicao == 0:
-    posicao_x = int(input('x = '))
-    posicao_y = int(input('y = '))
+jogada_1 = 0
+while jogada_1 == 0:
+    posicao_x1 = int(input('x = '))
+    posicao_y1 = int(input('y = '))
     for c in tabuleiro:
-        if c[1] == posicao_x:
-            if c[2] == posicao_y:
+        if c[1] == posicao_x1:
+            if c[2] == posicao_y1:
                 if c[0] == 'o  ':
-                    posicao = c[:]
+                    jogada_1 = c[:]
                     c[0] = '\033[35m{}\033[0m'.format(c[0])
                 else:
                     print('')
                     print('Posição invalida.')
                     print('')
-
 for c in tabuleiro:
     if posicao != c[1]:
         print()
     posicao = c[1]
     print(c[0], end='')
-print()
 
 for c in tabuleiro:
-    if c[1] == posicao_x:
-        if c[2] == posicao_y:
+    if c[1] == posicao_x1:
+        if c[2] == posicao_y1:
             c[0] = 'o  '
 
-
+jogada_2 = 0
+while jogada_2 == 0:
+    print('')
+    print('')
+    posicao_x2 = int(input('x2 = '))
+    posicao_y2 = int(input('y2 = '))
+    for c in tabuleiro:
+        if c[0] == '*  ' and c[1] == posicao_x2 and c[2] == posicao_y2 and posicao_y1+2 == posicao_y2 and posicao_x1+2 == posicao_x2:
+            jogada_2 = c[:]
+            c[0] = '\033[34m{}\033[0m'.format(c[0])
 for c in tabuleiro:
     if posicao != c[1]:
         print()
     posicao = c[1]
     print(c[0], end='')
 print()
+
+for c in tabuleiro:
+    if c[1] == posicao_x2:
+        if c[2] == posicao_y2:
+            c[0] = '*  '
+
+for c in tabuleiro:
+    if posicao != c[1]:
+        print()
+    posicao = c[1]
+    print(c[0], end='')
 
