@@ -23,8 +23,18 @@ print('')
 
 jogada_1 = 0
 while jogada_1 == 0:
-    posicao_x1 = int(input('x = '))
-    posicao_y1 = int(input('y = '))
+    while True:
+        posicao_x1 = int(input('x = '))
+        if posicao_x1 >= 0 and posicao_x1 <= 9:
+            break
+        else:
+            print('Digite um valor valido')
+    while True:
+        posicao_y1 = int(input('y = '))
+        if posicao_y1 >= 0 and posicao_y1 <= 9:
+            break
+        else:
+            print('Digite um valor valido')
     for c in tabuleiro:
         if c[1] == posicao_x1:
             if c[2] == posicao_y1:
@@ -50,8 +60,18 @@ jogada_2 = 0
 while jogada_2 == 0:
     print('')
     print('')
-    posicao_x2 = int(input('x2 = '))
-    posicao_y2 = int(input('y2 = '))
+    while True:
+        posicao_x2 = int(input('x2 = '))
+        if posicao_x2 >=1 and posicao_x2<=9:
+            break
+        else:
+            print('Digite um valor valido')
+    while True:
+        posicao_y2 = int(input('y2 = '))
+        if posicao_y2 >=1 and posicao_y2<=9:
+            break
+        else:
+            print('Digite um valor valido')
     for c in tabuleiro:
         if c[0] == '*  ' and c[1] == posicao_x2 and c[2] == posicao_y2 and posicao_y1+2 == posicao_y2 and posicao_x1+2 == posicao_x2:
             jogada_2 = c[:]
