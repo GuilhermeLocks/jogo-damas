@@ -63,10 +63,10 @@ for c in tabuleiro:
     posicao = c[1]
     print(c[0], end='')
 
-for c in tabuleiro:
-    if c[1] == posicao_x1:
-        if c[2] == posicao_y1:
-            c[0] = 'o  '
+#for c in tabuleiro:
+#    if c[1] == posicao_x1:
+#        if c[2] == posicao_y1:
+#            c[0] = 'o  '
 
 jogada_2 = 0
 while jogada_2 == 0:
