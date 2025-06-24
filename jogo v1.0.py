@@ -123,11 +123,11 @@ while True:
         for c in tabuleiro:
             if c[1] == posicao_x1:
                 if c[2] == posicao_y1:
-                    c[0] = '=  '
+                    c[0] = '*  '
         for c in tabuleiro:
             if c[1] == posicao_x2:
                 if c[2] == posicao_y2:
-                    c[0] = '\033[35mo  \033[0m'
+                    c[0] = 'o  '
         for c in tabuleiro:
             if posicao != c[1]:
                 print()
