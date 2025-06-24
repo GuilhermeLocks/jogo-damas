@@ -91,28 +91,24 @@ def jogada_1():
             else:
                 print('Digite um valor valido')
         for c in tabuleiro:
-            if c[0] == '*  ' and c[1] == posicao_x2 and c[
-                2] == posicao_y2 and posicao_y1 + 2 == posicao_y2 and posicao_x1 + 2 == posicao_x2:
+            if c[0] == '*  ' and c[1] == posicao_x2 and c[2] == posicao_y2 and posicao_y1 + 2 == posicao_y2 and posicao_x1 + 2 == posicao_x2:
                 jogada_2 = c[:]
                 c[0] = '\033[34m{}\033[0m'.format(c[0])
-            if c[0] == '*  ' and c[1] == posicao_x2 and c[
-                2] == posicao_y2 and posicao_y1 - 1 == posicao_y2 and posicao_x1 + 1 == posicao_x2:
+            if c[0] == '*  ' and c[1] == posicao_x2 and c[2] == posicao_y2 and posicao_y1 + 2 == posicao_y2 and posicao_x1 - 2 == posicao_x2:
                 jogada_2 = c[:]
                 c[0] = '\033[34m{}\033[0m'.format(c[0])
-            if c[0] == '*  ' and c[1] == posicao_x2 and c[
-                2] == posicao_y2 and posicao_y1 - 2 == posicao_y2 and posicao_x1 - 2 == posicao_x2:
+            if c[0] == '*  ' and c[1] == posicao_x2 and c[2] == posicao_y2 and posicao_y1 - 2 == posicao_y2 and posicao_x1 - 2 == posicao_x2:
                 jogada_2 = c[:]
                 c[0] = '\033[34m{}\033[0m'.format(c[0])
-            if c[0] == '*  ' and c[1] == posicao_x2 and c[
-                2] == posicao_y2 and posicao_y1 - 2 == posicao_y2 and posicao_x1 + 2 == posicao_x2:
+            if c[0] == '*  ' and c[1] == posicao_x2 and c[2] == posicao_y2 and posicao_y1 - 2 == posicao_y2 and posicao_x1 + 2 == posicao_x2:
                 jogada_2 = c[:]
                 c[0] = '\033[34m{}\033[0m'.format(c[0])
-            if c[0] == '*  ' and c[1] == posicao_x2 and c[
-                2] == posicao_y2 and posicao_y1 + 2 == posicao_y2 and posicao_x1 + 2 == posicao_x2:
+
+
+            if c[0] == '*  ' and c[1] == posicao_x2 and c[2] == posicao_y2 and posicao_y1 - 1 == posicao_y2 and posicao_x1 + 1 == posicao_x2:
                 jogada_2 = c[:]
                 c[0] = '\033[34m{}\033[0m'.format(c[0])
-            if c[0] == '*  ' and c[1] == posicao_x2 and c[
-                2] == posicao_y2 and posicao_y1 + 1 == posicao_y2 and posicao_x1 + 1 == posicao_x2:
+            if c[0] == '*  ' and c[1] == posicao_x2 and c[2] == posicao_y2 and posicao_y1 + 1 == posicao_y2 and posicao_x1 + 1 == posicao_x2:
                 jogada_2 = c[:]
                 c[0] = '\033[34m{}\033[0m'.format(c[0])
     for c in tabuleiro:
@@ -120,4 +116,20 @@ def jogada_1():
             print()
         posicao = c[1]
         print(c[0], end='')
+    print('')
+    print('')
+    for c in tabuleiro:
+        if c[1] == posicao_x1:
+            if c[2] == posicao_y1:
+                c[0] = '=  '
+    for c in tabuleiro:
+        if c[1] == posicao_x2:
+            if c[2] == posicao_y2:
+                c[0] = '\033[35mo  \033[0m'
+    for c in tabuleiro:
+        if posicao != c[1]:
+            print()
+        posicao = c[1]
+        print(c[0], end='')
+
 jogada_1()
