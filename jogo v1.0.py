@@ -2,7 +2,6 @@ fundo_jogavel = '=  '
 fundo_injogavel = '*  '
 jogador = 'o  '
 computador = 'x  '
-
 tabuleiro = [
     ['X  ', 9, 0],
     ['8  ', 8, 0], [fundo_jogavel, 8, 1], [computador, 8, 2], [fundo_jogavel, 8, 3], [computador, 8, 4], [fundo_jogavel, 8, 5], [computador, 8, 6], [fundo_jogavel, 8, 7], [computador, 8, 8],
@@ -130,6 +129,14 @@ def jogador():
                 c[0] = 'o  '
 
 def computador():
+    posicao = 0
+    for c in tabuleiro:
+        if posicao != c[1]:
+            print()
+        posicao = c[1]
+        print(c[0], end='')
+    print('')
+    print('')
     for c in tabuleiro:
         if c[0] == 'x  ':
             posicao_x = c[1]
