@@ -116,13 +116,6 @@ while True:
                     jogada_2 = c[:]
                     c[0] = '\033[34m{}\033[0m'.format(c[0])
         for c in tabuleiro:
-            if posicao != c[1]:
-                print()
-            posicao = c[1]
-            print(c[0], end='')
-        print('')
-        print('')
-        for c in tabuleiro:
             if c[1] == posicao_x1:
                 if c[2] == posicao_y1:
                     c[0] = '*  '
