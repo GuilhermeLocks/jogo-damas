@@ -165,8 +165,6 @@ def computador():
         if c[0] == '\x1b[35mx  \x1b[0m':
             c[0] = 'x  '
 
-
-
 while True:
     jogador()
     computador()
