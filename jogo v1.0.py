@@ -21,7 +21,7 @@ def jogador():
             print()
         posicao = c[1]
         print(c[0], end='')
-    print('')
+    print('1')
     print('')
     posicao = 0
     jogada_1 = 0
@@ -65,6 +65,7 @@ def jogador():
             print()
         posicao = c[1]
         print(c[0], end='')
+    print('2')
     jogada_2 = 0
     while jogada_2 == 0:
         print('')
@@ -127,16 +128,16 @@ def jogador():
         if c[1] == posicao_x2:
             if c[2] == posicao_y2:
                 c[0] = 'o  '
-
-def computador():
-    posicao = 0
     for c in tabuleiro:
         if posicao != c[1]:
             print()
         posicao = c[1]
         print(c[0], end='')
+    print('3')
     print('')
-    print('')
+
+def computador():
+    posicao = 0
     for c in tabuleiro:
         if c[0] == 'x  ':
             posicao_x = c[1]
@@ -150,6 +151,21 @@ def computador():
                             if c[2] == posicao_y:
                                 if c[0] == 'x  ':
                                     c[0] = '\033[35m{}\033[0m'.format(c[0])
+    for c in tabuleiro:
+        if c[0] == '\x1b[35mx  \x1b[0m':
+            for c in tabuleiro:
+                if posicao != c[1]:
+                    print()
+                posicao = c[1]
+                print(c[0], end='')
+            print('4')
+            print('')
+
+    for c in tabuleiro:
+        if c[0] == '\x1b[35mx  \x1b[0m':
+            c[0] = 'x  '
+
+
 
 while True:
     jogador()
