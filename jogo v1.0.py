@@ -17,6 +17,7 @@ tabuleiro = [
     ['0  ', 0, 0],  ['1  ', 0, 0], ['2  ', 0, 0], ['3  ', 0, 0], ['4  ', 0, 0], ['5  ', 0, 0], ['6  ', 0, 0], ['7  ', 0, 0], ['8  ', 0, 0], ['Y  ', 0, 0],                                                                                                                                                     ]
 
 def jogador():
+
     posicao = 0
     for c in tabuleiro:
         if posicao != c[1]:
@@ -25,7 +26,7 @@ def jogador():
         print(c[0], end='')
     print('')
     print('')
-    posicao = 0
+
     jogada_1 = 0
     while jogada_1 == 0:
         while True:
@@ -62,12 +63,16 @@ def jogador():
                         print('')
                         print('Posição invalida.')
                         print('')
+
+    posicao = 0
     for c in tabuleiro:
         if posicao != c[1]:
             print()
         posicao = c[1]
         print(c[0], end='')
     print('')
+    print('')
+
     jogada_2 = 0
     while jogada_2 == 0:
         print('')
@@ -122,14 +127,18 @@ def jogador():
                 2] == posicao_y2 and posicao_y1 + 1 == posicao_y2 and posicao_x1 + 1 == posicao_x2:
                 jogada_2 = c[:]
                 c[0] = '\033[34m{}\033[0m'.format(c[0])
+
     for c in tabuleiro:
         if c[1] == posicao_x1:
             if c[2] == posicao_y1:
                 c[0] = '*  '
+
     for c in tabuleiro:
         if c[1] == posicao_x2:
             if c[2] == posicao_y2:
                 c[0] = 'o  '
+
+    posicao = 0
     for c in tabuleiro:
         if posicao != c[1]:
             print()
@@ -139,6 +148,7 @@ def jogador():
     print('')
 
 def computador():
+
     for c in tabuleiro:
         if c[0] == 'x  ':
             posicao_x = c[1]
