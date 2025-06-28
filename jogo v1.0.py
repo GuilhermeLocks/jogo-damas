@@ -16,8 +16,7 @@ tabuleiro = [
     ['1  ', 1, 0], [jogador, 1, 1], [fundo_jogavel, 1, 2], [jogador, 1, 3], [fundo_jogavel, 1, 4], [jogador, 1, 5], [fundo_jogavel, 1, 6], [jogador, 1, 7], [fundo_jogavel, 1, 8],
     ['0  ', 0, 0],  ['1  ', 0, 0], ['2  ', 0, 0], ['3  ', 0, 0], ['4  ', 0, 0], ['5  ', 0, 0], ['6  ', 0, 0], ['7  ', 0, 0], ['8  ', 0, 0], ['Y  ', 0, 0],                                                                                                                                                     ]
 
-def jogador():
-
+def tabuada():
     posicao = 0
     for c in tabuleiro:
         if posicao != c[1]:
@@ -26,6 +25,8 @@ def jogador():
         print(c[0], end='')
     print('')
     print('')
+
+def jogador():
 
     jogada_1 = 0
     while jogada_1 == 0:
@@ -64,14 +65,7 @@ def jogador():
                         print('Posição invalida.')
                         print('')
 
-    posicao = 0
-    for c in tabuleiro:
-        if posicao != c[1]:
-            print()
-        posicao = c[1]
-        print(c[0], end='')
-    print('')
-    print('')
+    tabuada()
 
     jogada_2 = 0
     while jogada_2 == 0:
@@ -138,15 +132,6 @@ def jogador():
             if c[2] == posicao_y2:
                 c[0] = 'o  '
 
-    posicao = 0
-    for c in tabuleiro:
-        if posicao != c[1]:
-            print()
-        posicao = c[1]
-        print(c[0], end='')
-    print('')
-    print('')
-
 def computador():
 
     for c in tabuleiro:
@@ -205,6 +190,8 @@ def computador():
                         for c in tabuleiro:
                             if c[0] == roxo and c[1] == posicao_x and c[2] == posicao_y:
                                 c[0] = azul
+
+    tabuada()
 
 while True:
     computador()
