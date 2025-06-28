@@ -138,6 +138,7 @@ def jogador():
 
 def computador():
     posicao = 0
+
     for c in tabuleiro:
         if c[0] == 'x  ':
             posicao_x = c[1]
@@ -174,17 +175,6 @@ def computador():
                             if c[2] == posicao_y:
                                 if c[0] == '\x1b[34mx  \x1b[0m':
                                     c[0] = '\x1b[35mx  \x1b[0m'
-
-
-    #for c in tabuleiro:
-    #    if c[0] == '\x1b[35mx  \x1b[0m':
-    #        for c in tabuleiro:
-    #            if posicao != c[1]:
-    #                print()
-    #            posicao = c[1]
-    #            print(c[0], end='')
-    #        print('')
-    #        print('')
 
 while True:
     computador()
