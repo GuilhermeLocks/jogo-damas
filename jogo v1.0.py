@@ -2,6 +2,8 @@ fundo_jogavel = '=  '
 fundo_injogavel = '*  '
 jogador = 'o  '
 computador = 'x  '
+azul = '\033[34mx  \033[0m'
+roxo = '\033[35mx  \033[0m'
 tabuleiro = [
     ['X  ', 9, 0],
     ['8  ', 8, 0], [fundo_jogavel, 8, 1], [computador, 8, 2], [fundo_jogavel, 8, 3], [computador, 8, 4], [fundo_jogavel, 8, 5], [computador, 8, 6], [fundo_jogavel, 8, 7], [computador, 8, 8],
@@ -137,8 +139,6 @@ def jogador():
     print('')
 
 def computador():
-    posicao = 0
-
     for c in tabuleiro:
         if c[0] == 'x  ':
             posicao_x = c[1]
@@ -149,32 +149,52 @@ def computador():
                         if c[1] == posicao_x:
                             if c[2] == posicao_y:
                                 if c[0] == 'x  ':
-                                    c[0] = '\033[34m{}\033[0m'.format(c[0])
+                                    c[0] = azul
 
                 if v[0] == '*  'and v[1] == posicao_x-1 and v[2] == posicao_y+1:
                     for c in tabuleiro:
                         if c[1] == posicao_x:
                             if c[2] == posicao_y:
                                 if c[0] == 'x  ':
-                                    c[0] = '\033[34m{}\033[0m'.format(c[0])
+                                    c[0] = azul
 
     for c in tabuleiro:
-        if c[0] == '\x1b[34mx  \x1b[0m':
+        if c[0] == azul:
             posicao_x = c[1]
             posicao_y = c[2]
             for v in tabuleiro:
                 if v[0] == 'o  ' and v[1] == posicao_x-1 and v[2] == posicao_y-1:
-                    for c in tabuleiro:
-                        if c[1] == posicao_x:
-                            if c[2] == posicao_y:
-                                if c[0] == '\x1b[34mx  \x1b[0m':
-                                    c[0] = '\x1b[35mx  \x1b[0m'
+                    for b in tabuleiro:
+                        if b[0] == '*  ' and b[1] == posicao_x-2 and b[2] == posicao_y-2:
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] == azul:
+                                            c[0] = roxo
+
                 if v[0] == 'o  ' and v[1] == posicao_x-1 and v[2] == posicao_y+1:
+                    for b in tabuleiro:
+                        if b[0] == '*  ' and b[1] == posicao_x - 2 and b[2] == posicao_y + 2:
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] == azul:
+                                            c[0] = roxo
+
+    for c in tabuleiro:
+        if c[0] == roxo:
+            posicao_x = c[1]
+            posicao_y = c[2]
+            for v in tabuleiro:
+                if v[0] == 'o  ' and v[1] == posicao_x -2 and v[2] == posicao_y - 2:
                     for c in tabuleiro:
-                        if c[1] == posicao_x:
-                            if c[2] == posicao_y:
-                                if c[0] == '\x1b[34mx  \x1b[0m':
-                                    c[0] = '\x1b[35mx  \x1b[0m'
+                        if c[0] == roxo and c[1] == posicao_x and c[2] == posicao_y:
+                            c[0] = azul
+                for v in tabuleiro:
+                    if v[0] == 'o  ' and v[1] == posicao_x - 2 and v[2] == posicao_y + 2:
+                        for c in tabuleiro:
+                            if c[0] == roxo and c[1] == posicao_x and c[2] == posicao_y:
+                                c[0] = azul
 
 while True:
     computador()
