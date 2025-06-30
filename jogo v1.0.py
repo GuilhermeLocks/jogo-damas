@@ -116,6 +116,7 @@ def jogador():
 
 def computador():
 
+    # limpa o tabuleiro
     for c in tabuleiro:
         if c[0] == azul:
             c[0] = 'x  '
@@ -125,7 +126,8 @@ def computador():
             c[0] = 'x  '
         if c[0] == vermelho:
             c[0] = 'x  '
-    # azul
+
+    # verificar posições jogaveis e deixa azul
     for c in tabuleiro:
         if c[0] == 'x  ':
             posicao_x = c[1]
@@ -148,7 +150,8 @@ def computador():
                             if c[2] == posicao_y:
                                 if c[0] == 'x  ':
                                     c[0] = azul
-    # magenta
+
+    # verificar posições que pega 1 peça e deixa azulmagenta
     for c in tabuleiro:
         if c[0] == 'x  ' or c[0] ==  azul:
             posicao_x = c[1]
@@ -175,7 +178,8 @@ def computador():
                                     if c[2] == posicao_y:
                                         if c[0] == 'x  ' or c[0] ==  azul:
                                             c[0] = magenta
-    # verde
+
+    # verificar posições que pega 2 peças e deixa verde
     for c in tabuleiro:
         if c[0] == 'x  ' or c[0] == magenta:
             posicao_x = c[1]
@@ -256,7 +260,8 @@ def computador():
                                                     if c[2] == posicao_y:
                                                         if c[0] == 'x  ' or c[0] == magenta:
                                                             c[0] = verde
-    # vermelho
+
+    # verificar posições que pega 3 peças e deixa vermelho
     for c in tabuleiro:
         if c[0] == 'x  ' or c[0] == magenta or c[0] == verde:
             posicao_x = c[1]
