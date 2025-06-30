@@ -138,15 +138,15 @@ def computador():
         if c[0] == 'x  ':
             posicao_x = c[1]
             posicao_y = c[2]
-            for v in tabuleiro:
-                if v[0] == '*  'and v[1] == posicao_x-1 and v[2] == posicao_y-1:
+            for c in tabuleiro:
+                if c[0] == '*  'and c[1] == posicao_x-1 and c[2] == posicao_y-1:
                     for c in tabuleiro:
                         if c[1] == posicao_x:
                             if c[2] == posicao_y:
                                 if c[0] == 'x  ':
                                     c[0] = azul
 
-                if v[0] == '*  'and v[1] == posicao_x-1 and v[2] == posicao_y+1:
+                if c[0] == '*  'and c[1] == posicao_x-1 and c[2] == posicao_y+1:
                     for c in tabuleiro:
                         if c[1] == posicao_x:
                             if c[2] == posicao_y:
@@ -157,19 +157,19 @@ def computador():
         if c[0] == azul:
             posicao_x = c[1]
             posicao_y = c[2]
-            for v in tabuleiro:
-                if v[0] == 'o  ' and v[1] == posicao_x-1 and v[2] == posicao_y-1:
-                    for b in tabuleiro:
-                        if b[0] == '*  ' and b[1] == posicao_x-2 and b[2] == posicao_y-2:
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x-1 and c[2] == posicao_y-1:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x-2 and c[2] == posicao_y-2:
                             for c in tabuleiro:
                                 if c[1] == posicao_x:
                                     if c[2] == posicao_y:
                                         if c[0] == azul:
                                             c[0] = roxo
 
-                if v[0] == 'o  ' and v[1] == posicao_x-1 and v[2] == posicao_y+1:
-                    for b in tabuleiro:
-                        if b[0] == '*  ' and b[1] == posicao_x - 2 and b[2] == posicao_y + 2:
+                if c[0] == 'o  ' and c[1] == posicao_x-1 and c[2] == posicao_y+1:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x - 2 and c[2] == posicao_y + 2:
                             for c in tabuleiro:
                                 if c[1] == posicao_x:
                                     if c[2] == posicao_y:
@@ -180,13 +180,13 @@ def computador():
         if c[0] == roxo:
             posicao_x = c[1]
             posicao_y = c[2]
-            for v in tabuleiro:
-                if v[0] == 'o  ' and v[1] == posicao_x -2 and v[2] == posicao_y - 2:
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x -2 and c[2] == posicao_y - 2:
                     for c in tabuleiro:
                         if c[0] == roxo and c[1] == posicao_x and c[2] == posicao_y:
                             c[0] = azul
-                for v in tabuleiro:
-                    if v[0] == 'o  ' and v[1] == posicao_x - 2 and v[2] == posicao_y + 2:
+                for c in tabuleiro:
+                    if c[0] == 'o  ' and c[1] == posicao_x - 2 and c[2] == posicao_y + 2:
                         for c in tabuleiro:
                             if c[0] == roxo and c[1] == posicao_x and c[2] == posicao_y:
                                 c[0] = azul
