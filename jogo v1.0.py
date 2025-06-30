@@ -197,11 +197,6 @@ def computador():
                                                         if c[0] == 'x  ' or c[0] == magenta:
                                                             c[0] = verde
 
-            for c in tabuleiro:
-                if c[0] == 'o  ' and c[1] == posicao_x-1 and c[2] == posicao_y-1:
-                    for c in tabuleiro:
-                        if c[0] == '*  ' and c[1] == posicao_x-2 and c[2] == posicao_y-2:
-
                             for c in tabuleiro:
                                 if c[0] == 'o  ' and c[1] == posicao_x - 3 and c[2] == posicao_y - 1:
                                     for c in tabuleiro:
@@ -212,11 +207,6 @@ def computador():
                                                     if c[2] == posicao_y:
                                                         if c[0] == 'x  ' or c[0] == magenta:
                                                             c[0] = verde
-
-            for c in tabuleiro:
-                if c[0] == 'o  ' and c[1] == posicao_x-1 and c[2] == posicao_y-1:
-                    for c in tabuleiro:
-                        if c[0] == '*  ' and c[1] == posicao_x-2 and c[2] == posicao_y-2:
 
                             for c in tabuleiro:
                                 if c[0] == 'o  ' and c[1] == posicao_x - 1 and c[2] == posicao_y - 3:
@@ -245,11 +235,6 @@ def computador():
                                                         if c[0] == 'x  ' or c[0] == magenta:
                                                             c[0] = verde
 
-            for c in tabuleiro:
-                if c[0] == 'o  ' and c[1] == posicao_x - 1 and c[2] == posicao_y + 1:
-                    for c in tabuleiro:
-                        if c[0] == '*  ' and c[1] == posicao_x - 2 and c[2] == posicao_y + 2:
-
                             for c in tabuleiro:
                                 if c[0] == 'o  ' and c[1] == posicao_x - 3 and c[2] == posicao_y + 1:
                                     for c in tabuleiro:
@@ -260,11 +245,6 @@ def computador():
                                                     if c[2] == posicao_y:
                                                         if c[0] == 'x  ' or c[0] == magenta:
                                                             c[0] = verde
-
-            for c in tabuleiro:
-                if c[0] == 'o  ' and c[1] == posicao_x - 1 and c[2] == posicao_y + 1:
-                    for c in tabuleiro:
-                        if c[0] == '*  ' and c[1] == posicao_x - 2 and c[2] == posicao_y + 2:
 
                             for c in tabuleiro:
                                 if c[0] == 'o  ' and c[1] == posicao_x - 1 and c[2] == posicao_y + 3:
@@ -298,11 +278,6 @@ def computador():
                                                         if c[0] == 'x  ' or c[0] == magenta:
                                                             c[0] = vermelho
 
-            for c in tabuleiro:
-                if c[0] == 'o  ' and c[1] == posicao_x-1 and c[2] == posicao_y-1:
-                    for c in tabuleiro:
-                        if c[0] == '*  ' and c[1] == posicao_x-2 and c[2] == posicao_y-2:
-
                             for c in tabuleiro:
                                 if c[0] == 'o  ' and c[1] == posicao_x - 3 and c[2] == posicao_y - 1:
                                     for c in tabuleiro:
@@ -313,11 +288,6 @@ def computador():
                                                     if c[2] == posicao_y:
                                                         if c[0] == 'x  ' or c[0] == magenta:
                                                             c[0] = vermelho
-
-            for c in tabuleiro:
-                if c[0] == 'o  ' and c[1] == posicao_x-1 and c[2] == posicao_y-1:
-                    for c in tabuleiro:
-                        if c[0] == '*  ' and c[1] == posicao_x-2 and c[2] == posicao_y-2:
 
                             for c in tabuleiro:
                                 if c[0] == 'o  ' and c[1] == posicao_x - 1 and c[2] == posicao_y - 3:
@@ -346,11 +316,6 @@ def computador():
                                                         if c[0] == 'x  ' or c[0] == magenta:
                                                             c[0] = vermelho
 
-            for c in tabuleiro:
-                if c[0] == 'o  ' and c[1] == posicao_x - 1 and c[2] == posicao_y + 1:
-                    for c in tabuleiro:
-                        if c[0] == '*  ' and c[1] == posicao_x - 2 and c[2] == posicao_y + 2:
-
                             for c in tabuleiro:
                                 if c[0] == 'o  ' and c[1] == posicao_x - 3 and c[2] == posicao_y + 1:
                                     for c in tabuleiro:
@@ -361,11 +326,6 @@ def computador():
                                                     if c[2] == posicao_y:
                                                         if c[0] == 'x  ' or c[0] == magenta:
                                                             c[0] = vermelho
-
-            for c in tabuleiro:
-                if c[0] == 'o  ' and c[1] == posicao_x - 1 and c[2] == posicao_y + 1:
-                    for c in tabuleiro:
-                        if c[0] == '*  ' and c[1] == posicao_x - 2 and c[2] == posicao_y + 2:
 
                             for c in tabuleiro:
                                 if c[0] == 'o  ' and c[1] == posicao_x - 1 and c[2] == posicao_y + 3:
