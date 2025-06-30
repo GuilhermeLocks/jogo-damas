@@ -127,7 +127,7 @@ def computador():
         if c[0] == vermelho:
             c[0] = 'x  '
 
-    # verificar posições jogaveis e deixa azul
+    # verificar posições jogáveis e deixa azul
     for c in tabuleiro:
         if c[0] == 'x  ':
             posicao_x = c[1]
@@ -151,7 +151,7 @@ def computador():
                                 if c[0] == 'x  ':
                                     c[0] = azul
 
-    # verificar posições que pega 1 peça e deixa azulmagenta
+    # verificar posições que pega 1 peça e deixa magenta
     for c in tabuleiro:
         if c[0] == 'x  ' or c[0] ==  azul:
             posicao_x = c[1]
