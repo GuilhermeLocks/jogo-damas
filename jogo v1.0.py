@@ -29,10 +29,8 @@ def tabuada():
     print('')
 
 def jogador():
-
     jogada_1 = 0
     while jogada_1 == 0:
-
         while True:
             while True:
                 try:
@@ -45,7 +43,6 @@ def jogador():
                 break
             else:
                 print('Digite um valor valido')
-
         while True:
             while True:
                 try:
@@ -371,7 +368,6 @@ def computador():
                                                             c[0] = vermelho
 
     tabuada()
-
 while True:
     computador()
     jogador()
