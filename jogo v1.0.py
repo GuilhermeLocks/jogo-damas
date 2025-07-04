@@ -110,9 +110,7 @@ def jogador():
         if c[1] == posicao_x2:
             if c[2] == posicao_y2:
                 c[0] = 'o  '
-
 def computador():
-
     # limpa o tabuleiro
     for c in tabuleiro:
         if c[0] == azul:
@@ -123,7 +121,6 @@ def computador():
             c[0] = 'x  '
         if c[0] == vermelho:
             c[0] = 'x  '
-
     # verificar posições jogáveis e deixa azul
     for c in tabuleiro:
         if c[0] == 'x  ':
