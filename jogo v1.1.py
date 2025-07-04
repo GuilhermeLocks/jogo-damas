@@ -133,254 +133,41 @@ def computador():
         if c[0] == vermelho:
             c[0] = 'x  '
 
-    # verificar posições jogáveis e deixa azul
+    # verificar posições que pega 1 peça e deixa magenta
     for c in tabuleiro:
         if c[0] == 'x  ':
             posicao_x = c[1]
             posicao_y = c[2]
 
             for c in tabuleiro:
-
-                if c[0] == '*  ' and c[1] == posicao_x - 1 and c[2] == posicao_y - 1:
-
-                    for c in tabuleiro:
-                        if c[1] == posicao_x:
-                            if c[2] == posicao_y:
-                                if c[0] == 'x  ':
-                                    c[0] = azul
-
-                if c[0] == '*  ' and c[1] == posicao_x - 1 and c[2] == posicao_y + 1:
-
-                    for c in tabuleiro:
-                        if c[1] == posicao_x:
-                            if c[2] == posicao_y:
-                                if c[0] == 'x  ':
-                                    c[0] = azul
-
-    # verificar posições que pega 1 peça e deixa magenta
-    for c in tabuleiro:
-        if c[0] == 'x  ' or c[0] == azul:
-            posicao_x = c[1]
-            posicao_y = c[2]
-
-            for c in tabuleiro:
                 if c[0] == 'o  ' and c[1] == posicao_x - 1 and c[2] == posicao_y + 1:
                     for c in tabuleiro:
                         if c[0] == '*  ' and c[1] == posicao_x - 2 and c[2] == posicao_y + 2:
-
                             for c in tabuleiro:
                                 if c[1] == posicao_x:
                                     if c[2] == posicao_y:
-                                        if c[0] == 'x  ' or c[0] == azul:
+                                        if c[0] == 'x  ':
                                             c[0] = magenta
-
-            for c in tabuleiro:
-                if c[0] == 'o  ' and c[1] == posicao_x - 1 and c[2] == posicao_y - 1:
-                    for c in tabuleiro:
-                        if c[0] == '*  ' and c[1] == posicao_x - 2 and c[2] == posicao_y - 2:
-
-                            for c in tabuleiro:
-                                if c[1] == posicao_x:
-                                    if c[2] == posicao_y:
-                                        if c[0] == 'x  ' or c[0] == azul:
-                                            c[0] = magenta
-
-    # verificar posições que pega 2 peças e deixa verde
-    for c in tabuleiro:
-        if c[0] == 'x  ' or c[0] == magenta:
-            posicao_x = c[1]
-            posicao_y = c[2]
-
-            for c in tabuleiro:
-                if c[0] == 'o  ' and c[1] == posicao_x - 1 and c[2] == posicao_y - 1:
-                    for c in tabuleiro:
-                        if c[0] == '*  ' and c[1] == posicao_x - 2 and c[2] == posicao_y - 2:
-
-                            for c in tabuleiro:
-                                if c[0] == 'o  ' and c[1] == posicao_x - 3 and c[2] == posicao_y - 3:
-                                    for c in tabuleiro:
-                                        if c[0] == '*  ' and c[1] == posicao_x - 4 and c[2] == posicao_y - 4:
-
-                                            for c in tabuleiro:
-                                                if c[1] == posicao_x:
-                                                    if c[2] == posicao_y:
-                                                        if c[0] == 'x  ' or c[0] == magenta:
-                                                            c[0] = verde
-
-                            for c in tabuleiro:
-                                if c[0] == 'o  ' and c[1] == posicao_x - 3 and c[2] == posicao_y - 1:
-                                    for c in tabuleiro:
-                                        if c[0] == '*  ' and c[1] == posicao_x - 4 and c[2] == posicao_y - 0:
-
-                                            for c in tabuleiro:
-                                                if c[1] == posicao_x:
-                                                    if c[2] == posicao_y:
-                                                        if c[0] == 'x  ' or c[0] == magenta:
-                                                            c[0] = verde
-
-                            for c in tabuleiro:
-                                if c[0] == 'o  ' and c[1] == posicao_x - 1 and c[2] == posicao_y - 3:
-                                    for c in tabuleiro:
-                                        if c[0] == '*  ' and c[1] == posicao_x - 0 and c[2] == posicao_y - 4:
-
-                                            for c in tabuleiro:
-                                                if c[1] == posicao_x:
-                                                    if c[2] == posicao_y:
-                                                        if c[0] == 'x  ' or c[0] == magenta:
-                                                            c[0] = verde
-
-            for c in tabuleiro:
-                if c[0] == 'o  ' and c[1] == posicao_x - 1 and c[2] == posicao_y + 1:
-                    for c in tabuleiro:
-                        if c[0] == '*  ' and c[1] == posicao_x - 2 and c[2] == posicao_y + 2:
 
                             for c in tabuleiro:
                                 if c[0] == 'o  ' and c[1] == posicao_x - 3 and c[2] == posicao_y + 3:
                                     for c in tabuleiro:
                                         if c[0] == '*  ' and c[1] == posicao_x - 4 and c[2] == posicao_y + 4:
-
                                             for c in tabuleiro:
                                                 if c[1] == posicao_x:
                                                     if c[2] == posicao_y:
-                                                        if c[0] == 'x  ' or c[0] == magenta:
+                                                        if c[0] == magenta:
                                                             c[0] = verde
-
-                            for c in tabuleiro:
-                                if c[0] == 'o  ' and c[1] == posicao_x - 3 and c[2] == posicao_y + 1:
-                                    for c in tabuleiro:
-                                        if c[0] == '*  ' and c[1] == posicao_x - 4 and c[2] == posicao_y + 0:
-
-                                            for c in tabuleiro:
-                                                if c[1] == posicao_x:
-                                                    if c[2] == posicao_y:
-                                                        if c[0] == 'x  ' or c[0] == magenta:
-                                                            c[0] = verde
-
-                            for c in tabuleiro:
-                                if c[0] == 'o  ' and c[1] == posicao_x - 1 and c[2] == posicao_y + 3:
-                                    for c in tabuleiro:
-                                        if c[0] == '*  ' and c[1] == posicao_x - 0 and c[2] == posicao_y + 4:
-
-                                            for c in tabuleiro:
-                                                if c[1] == posicao_x:
-                                                    if c[2] == posicao_y:
-                                                        if c[0] == 'x  ' or c[0] == magenta:
-                                                            c[0] = verde
-
-    # verificar posições que pega 3 peças e deixa vermelho
-    for c in tabuleiro:
-        if c[0] == 'x  ' or c[0] == magenta or c[0] == verde:
-            posicao_x = c[1]
-            posicao_y = c[2]
 
             for c in tabuleiro:
                 if c[0] == 'o  ' and c[1] == posicao_x - 1 and c[2] == posicao_y - 1:
                     for c in tabuleiro:
                         if c[0] == '*  ' and c[1] == posicao_x - 2 and c[2] == posicao_y - 2:
-
                             for c in tabuleiro:
-                                if c[0] == 'o  ' and c[1] == posicao_x - 3 and c[2] == posicao_y - 3:
-                                    for c in tabuleiro:
-                                        if c[0] == '*  ' and c[1] == posicao_x - 4 and c[2] == posicao_y - 4:
-
-                                            for c in tabuleiro:
-                                                if c[0] == 'o  ' and c[1] == posicao_x - 5 and c[2] == posicao_y - 3:
-                                                    for c in tabuleiro:
-                                                        if c[0] == '*  ' and c[1] == posicao_x - 6 and c[
-                                                            2] == posicao_y - 2:
-
-                                                            for c in tabuleiro:
-                                                                if c[1] == posicao_x:
-                                                                    if c[2] == posicao_y:
-                                                                        if c[0] == 'x  ' or c[0] == magenta or c[
-                                                                            0] == verde:
-                                                                            c[0] = vermelho
-
-                                            for c in tabuleiro:
-                                                if c[0] == 'o  ' and c[1] == posicao_x - 5 and c[2] == posicao_y - 5:
-                                                    for c in tabuleiro:
-                                                        if c[0] == '*  ' and c[1] == posicao_x - 6 and c[
-                                                            2] == posicao_y - 6:
-
-                                                            for c in tabuleiro:
-                                                                if c[1] == posicao_x:
-                                                                    if c[2] == posicao_y:
-                                                                        if c[0] == 'x  ' or c[0] == magenta or c[
-                                                                            0] == verde:
-                                                                            c[0] = vermelho
-
-                                            for c in tabuleiro:
-                                                if c[0] == 'o  ' and c[1] == posicao_x - 3 and c[2] == posicao_y - 5:
-                                                    for c in tabuleiro:
-                                                        if c[0] == '*  ' and c[1] == posicao_x - 2 and c[
-                                                            2] == posicao_y - 6:
-
-                                                            for c in tabuleiro:
-                                                                if c[1] == posicao_x:
-                                                                    if c[2] == posicao_y:
-                                                                        if c[0] == 'x  ' or c[0] == magenta or c[
-                                                                            0] == verde:
-                                                                            c[0] = vermelho
-
-                            for c in tabuleiro:
-                                if c[0] == 'o  ' and c[1] == posicao_x - 3 and c[2] == posicao_y - 1:
-                                    for c in tabuleiro:
-                                        if c[0] == '*  ' and c[1] == posicao_x - 4 and c[2] == posicao_y - 0:
-
-                                            for c in tabuleiro:
-                                                if c[1] == posicao_x:
-                                                    if c[2] == posicao_y:
-                                                        if c[0] == 'x  ' or c[0] == magenta:
-                                                            c[0] = vermelho
-
-                            for c in tabuleiro:
-                                if c[0] == 'o  ' and c[1] == posicao_x - 1 and c[2] == posicao_y - 3:
-                                    for c in tabuleiro:
-                                        if c[0] == '*  ' and c[1] == posicao_x - 0 and c[2] == posicao_y - 4:
-
-                                            for c in tabuleiro:
-                                                if c[1] == posicao_x:
-                                                    if c[2] == posicao_y:
-                                                        if c[0] == 'x  ' or c[0] == magenta:
-                                                            c[0] = vermelho
-
-            for c in tabuleiro:
-                if c[0] == 'o  ' and c[1] == posicao_x - 1 and c[2] == posicao_y + 1:
-                    for c in tabuleiro:
-                        if c[0] == '*  ' and c[1] == posicao_x - 2 and c[2] == posicao_y + 2:
-
-                            for c in tabuleiro:
-                                if c[0] == 'o  ' and c[1] == posicao_x - 3 and c[2] == posicao_y + 3:
-                                    for c in tabuleiro:
-                                        if c[0] == '*  ' and c[1] == posicao_x - 4 and c[2] == posicao_y + 4:
-
-                                            for c in tabuleiro:
-                                                if c[1] == posicao_x:
-                                                    if c[2] == posicao_y:
-                                                        if c[0] == 'x  ' or c[0] == magenta:
-                                                            c[0] = vermelho
-
-                            for c in tabuleiro:
-                                if c[0] == 'o  ' and c[1] == posicao_x - 3 and c[2] == posicao_y + 1:
-                                    for c in tabuleiro:
-                                        if c[0] == '*  ' and c[1] == posicao_x - 4 and c[2] == posicao_y + 0:
-
-                                            for c in tabuleiro:
-                                                if c[1] == posicao_x:
-                                                    if c[2] == posicao_y:
-                                                        if c[0] == 'x  ' or c[0] == magenta:
-                                                            c[0] = vermelho
-
-                            for c in tabuleiro:
-                                if c[0] == 'o  ' and c[1] == posicao_x - 1 and c[2] == posicao_y + 3:
-                                    for c in tabuleiro:
-                                        if c[0] == '*  ' and c[1] == posicao_x - 0 and c[2] == posicao_y + 4:
-
-                                            for c in tabuleiro:
-                                                if c[1] == posicao_x:
-                                                    if c[2] == posicao_y:
-                                                        if c[0] == 'x  ' or c[0] == magenta:
-                                                            c[0] = vermelho
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] == 'x  ':
+                                            c[0] = magenta
 
     tabuada()
 
