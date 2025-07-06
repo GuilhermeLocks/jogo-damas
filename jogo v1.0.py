@@ -369,3 +369,8 @@ while True:
     computador()
     jogador()
     
+    
+    
+    
+    
+    
