@@ -110,7 +110,9 @@ def jogador():
         if c[1] == posicao_x2:
             if c[2] == posicao_y2:
                 c[0] = 'o  '
+
 def computador():
+
     # limpa o tabuleiro
     for c in tabuleiro:
         if c[0] == azul:
@@ -121,6 +123,7 @@ def computador():
             c[0] = 'x  '
         if c[0] == vermelho:
             c[0] = 'x  '
+
     # verificar posições jogáveis e deixa azul
     for c in tabuleiro:
         if c[0] == 'x  ':
@@ -310,10 +313,28 @@ def computador():
                                         if c[0] == '*  ' and c[1] == posicao_x - 4 and c[2] == posicao_y - 0:
 
                                             for c in tabuleiro:
-                                                if c[1] == posicao_x:
-                                                    if c[2] == posicao_y:
-                                                        if c[0] == 'x  ' or c[0] == magenta:
-                                                            c[0] = vermelho
+                                                if c[0] == 'o  ' and c[1] == posicao_x - 5 and c[2] == posicao_y - 1:
+                                                    for c in tabuleiro:
+                                                        if c[0] == '*  ' and c[1] == posicao_x - 6 and c[2] == posicao_y - 2:
+
+
+                                                            for c in tabuleiro:
+                                                                if c[1] == posicao_x:
+                                                                    if c[2] == posicao_y:
+                                                                        if c[0] == 'x  ' or c[0] == magenta:
+                                                                            c[0] = vermelho
+
+                                            for c in tabuleiro:
+                                                if c[0] == 'o  ' and c[1] == posicao_x - 5 and c[2] == posicao_y + 1:
+                                                    for c in tabuleiro:
+                                                        if c[0] == '*  ' and c[1] == posicao_x - 6 and c[2] == posicao_y + 2:
+
+
+                                                            for c in tabuleiro:
+                                                                if c[1] == posicao_x:
+                                                                    if c[2] == posicao_y:
+                                                                        if c[0] == 'x  ' or c[0] == magenta:
+                                                                            c[0] = vermelho
 
                             for c in tabuleiro:
                                 if c[0] == 'o  ' and c[1] == posicao_x - 1 and c[2] == posicao_y - 3:
