@@ -9,8 +9,8 @@ vermelho = '\033[31mx  \033[0m'
 tabuleiro = [
     ['X  ', 9, 0],
     ['8  ', 8, 0], [fundo_jogavel, 8, 1], [computador, 8, 2], [fundo_jogavel, 8, 3], [computador, 8, 4], [fundo_jogavel, 8, 5], [computador, 8, 6], [fundo_jogavel, 8, 7], [computador, 8, 8],
-    ['7  ', 7, 0], [computador, 7, 1], [fundo_jogavel, 7, 2], [computador, 7, 3], [fundo_jogavel, 7, 4], [computador, 7, 5], [fundo_jogavel, 7, 6], [computador, 7, 7], [fundo_jogavel, 7, 8],
-    ['6  ', 6, 0], [fundo_jogavel, 6, 1], [computador, 6, 2], [fundo_jogavel, 6, 3], [computador, 6, 4], [fundo_jogavel, 6, 5], [computador, 6, 6], [fundo_jogavel, 6, 7], [computador, 6, 8],
+    ['7  ', 7, 0], [fundo_injogavel, 7, 1], [fundo_jogavel, 7, 2], [fundo_injogavel, 7, 3], [fundo_jogavel, 7, 4], [fundo_injogavel, 7, 5], [fundo_jogavel, 7, 6], [fundo_injogavel, 7, 7], [fundo_jogavel, 7, 8],
+    ['6  ', 6, 0], [fundo_jogavel, 6, 1], [fundo_injogavel, 6, 2], [fundo_jogavel, 6, 3], [fundo_injogavel, 6, 4], [fundo_jogavel, 6, 5], [fundo_injogavel, 6, 6], [fundo_jogavel, 6, 7], [fundo_injogavel, 6, 8],
     ['5  ', 5, 0], [fundo_injogavel, 5, 1], [fundo_jogavel, 5, 2], [fundo_injogavel, 5, 3], [fundo_jogavel, 5, 4], [fundo_injogavel, 5, 5], [fundo_jogavel, 5, 6], [fundo_injogavel, 5, 7], [fundo_jogavel, 5, 8],
     ['4  ', 4, 0], [fundo_jogavel, 4, 1], [fundo_injogavel, 4, 2], [fundo_jogavel, 4, 3], [fundo_injogavel, 4, 4], [fundo_jogavel, 4, 5], [fundo_injogavel, 4, 6], [fundo_jogavel, 4, 7], [fundo_injogavel, 4, 8],
     ['3  ', 3, 0], [jogador, 3, 1], [fundo_jogavel, 3, 2], [jogador, 3, 3], [fundo_jogavel, 3, 4], [jogador, 3, 5], [fundo_jogavel, 3, 6], [jogador, 3, 7], [fundo_jogavel, 3, 8],
