@@ -17,7 +17,6 @@ tabuleiro = [
     ['2  ', 2, 0], [fundo_jogavel, 2, 1], [fundo_injogavel, 2, 2], [fundo_jogavel, 2, 3], [fundo_injogavel, 2, 4], [fundo_jogavel, 2, 5], [jogador, 2, 6], [fundo_jogavel, 2, 7], [jogador, 2, 8],
     ['1  ', 1, 0], [jogador, 1, 1], [fundo_jogavel, 1, 2], [jogador, 1, 3], [fundo_jogavel, 1, 4], [jogador, 1, 5], [fundo_jogavel, 1, 6], [jogador, 1, 7], [fundo_jogavel, 1, 8],
     ['0  ', 0, 0],  ['1  ', 0, 0], ['2  ', 0, 0], ['3  ', 0, 0], ['4  ', 0, 0], ['5  ', 0, 0], ['6  ', 0, 0], ['7  ', 0, 0], ['8  ', 0, 0], ['Y  ', 0, 0],                                                                                                                                                     ]
-
 def tabuada():
     posicao = 0
     for c in tabuleiro:
@@ -27,7 +26,6 @@ def tabuada():
         print(c[0], end='')
     print('')
     print('')
-
 def jogador():
     jogada_1 = 0
     while jogada_1 == 0:
@@ -110,9 +108,7 @@ def jogador():
         if c[1] == posicao_x2:
             if c[2] == posicao_y2:
                 c[0] = 'o  '
-
 def computador():
-
     # limpa o tabuleiro
     for c in tabuleiro:
         if c[0] == azul:
@@ -123,7 +119,6 @@ def computador():
             c[0] = 'x  '
         if c[0] == vermelho:
             c[0] = 'x  '
-
     # verificar posições jogáveis e deixa azul
     for c in tabuleiro:
         if c[0] == 'x  ':
@@ -147,7 +142,6 @@ def computador():
                             if c[2] == posicao_y:
                                 if c[0] == 'x  ':
                                     c[0] = azul
-
     # verificar posições que pega 1 peça e deixa magenta
     for c in tabuleiro:
         if c[0] == 'x  ' or c[0] ==  azul:
@@ -175,7 +169,6 @@ def computador():
                                     if c[2] == posicao_y:
                                         if c[0] == 'x  ' or c[0] ==  azul:
                                             c[0] = magenta
-
     # verificar posições que pega 2 peças e deixa verde
     for c in tabuleiro:
         if c[0] == 'x  ' or c[0] == magenta:
@@ -257,7 +250,6 @@ def computador():
                                                     if c[2] == posicao_y:
                                                         if c[0] == 'x  ' or c[0] == magenta:
                                                             c[0] = verde
-
     # verificar posições que pega 3 peças e deixa vermelho
     for c in tabuleiro:
         if c[0] == 'x  ' or c[0] == magenta or c[0] == verde:
@@ -383,7 +375,6 @@ def computador():
                                                     if c[2] == posicao_y:
                                                         if c[0] == 'x  ' or c[0] == magenta:
                                                             c[0] = vermelho
-
     tabuada()
 while True:
     computador()
