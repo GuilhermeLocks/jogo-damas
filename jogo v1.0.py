@@ -429,6 +429,3 @@ def computador():
 while True:
     computador()
     jogador()
-    
-    
-    
