@@ -509,3 +509,5 @@ while True:
     jogador()
     
     
+    
+    
