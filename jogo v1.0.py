@@ -8,12 +8,12 @@ verde = '\033[32mx  \033[0m'
 vermelho = '\033[31mx  \033[0m'
 tabuleiro = [
     ['X  ', 9, 0],
-    ['8  ', 8, 0], [fundo_injogavel, 8, 1], [fundo_jogavel, 8, 2], [fundo_injogavel, 8, 3], [fundo_jogavel, 8, 4], [fundo_injogavel, 8, 5], [fundo_jogavel, 8, 6], [fundo_injogavel, 8, 7], [fundo_jogavel, 8, 8],
-    ['7  ', 7, 0], [fundo_jogavel, 7, 1], [fundo_injogavel, 7, 2], [fundo_jogavel, 7, 3], [fundo_injogavel, 7, 4], [fundo_jogavel, 7, 5], [fundo_injogavel, 7, 6], [fundo_jogavel, 7, 7], [fundo_injogavel, 7, 8],
+    ['8  ', 8, 0], [fundo_injogavel, 8, 1], [fundo_jogavel, 8, 2], [fundo_injogavel, 8, 3], [fundo_jogavel, 8, 4], [fundo_injogavel, 8, 5], [fundo_jogavel, 8, 6], [fundo_injogavel, 8, 7], [computador, 8, 8],
+    ['7  ', 7, 0], [fundo_jogavel, 7, 1], [fundo_injogavel, 7, 2], [fundo_jogavel, 7, 3], [fundo_injogavel, 7, 4], [fundo_jogavel, 7, 5], [fundo_injogavel, 7, 6], [jogador, 7, 7], [fundo_injogavel, 7, 8],
     ['6  ', 6, 0], [fundo_injogavel, 6, 1], [fundo_jogavel, 6, 2], [fundo_injogavel, 6, 3], [fundo_jogavel, 6, 4], [fundo_injogavel, 6, 5], [fundo_jogavel, 6, 6], [fundo_injogavel, 6, 7], [fundo_jogavel, 6, 8],
     ['5  ', 5, 0], [fundo_jogavel, 5, 1], [fundo_injogavel, 5, 2], [fundo_jogavel, 5, 3], [fundo_injogavel, 5, 4], [jogador, 5, 5], [fundo_injogavel, 5, 6], [fundo_jogavel, 5, 7], [fundo_injogavel, 5, 8],
-    ['4  ', 4, 0], [fundo_injogavel, 4, 1], [fundo_jogavel, 4, 2], [fundo_injogavel, 4, 3], [fundo_jogavel, 4, 4], [fundo_injogavel, 4, 5], [fundo_jogavel, 4, 6], [fundo_injogavel, 4, 7], [computador, 4, 8],
-    ['3  ', 3, 0], [fundo_jogavel, 3, 1], [fundo_injogavel, 3, 2], [fundo_jogavel, 3, 3], [fundo_injogavel, 3, 4], [jogador, 3, 5], [fundo_injogavel, 3, 6], [jogador, 3, 7], [fundo_injogavel, 3, 8],
+    ['4  ', 4, 0], [fundo_injogavel, 4, 1], [fundo_jogavel, 4, 2], [fundo_injogavel, 4, 3], [fundo_jogavel, 4, 4], [fundo_injogavel, 4, 5], [fundo_jogavel, 4, 6], [fundo_injogavel, 4, 7], [fundo_jogavel, 4, 8],
+    ['3  ', 3, 0], [fundo_jogavel, 3, 1], [fundo_injogavel, 3, 2], [fundo_jogavel, 3, 3], [fundo_injogavel, 3, 4], [fundo_jogavel, 3, 5], [fundo_injogavel, 3, 6], [fundo_jogavel, 3, 7], [fundo_injogavel, 3, 8],
     ['2  ', 2, 0], [fundo_injogavel, 2, 1], [fundo_jogavel, 2, 2], [fundo_injogavel, 2, 3], [fundo_jogavel, 2, 4], [fundo_injogavel, 2, 5], [fundo_jogavel, 2, 6], [fundo_injogavel, 2, 7], [fundo_jogavel, 2, 8],
     ['1  ', 1, 0], [fundo_jogavel, 1, 1], [fundo_injogavel, 1, 2], [fundo_jogavel, 1, 3], [fundo_injogavel, 1, 4], [fundo_jogavel, 1, 5], [fundo_injogavel, 1, 6], [fundo_jogavel, 1, 7], [fundo_injogavel, 1, 8],
     ['0  ', 0, 0],  ['1  ', 0, 0], ['2  ', 0, 0], ['3  ', 0, 0], ['4  ', 0, 0], ['5  ', 0, 0], ['6  ', 0, 0], ['7  ', 0, 0], ['8  ', 0, 0], ['Y  ', 0, 0],                                                                                                                                                     ]
@@ -165,17 +165,6 @@ def computador():
             posicao_y = c[2]
 
             for c in tabuleiro:
-                if c[0] == 'o  ' and c[1] == posicao_x - 1 and c[2] == posicao_y + 1:
-                    for c in tabuleiro:
-                        if c[0] == '*  ' and c[1] == posicao_x - 2 and c[2] == posicao_y + 2:
-
-                            for c in tabuleiro:
-                                if c[1] == posicao_x:
-                                    if c[2] == posicao_y:
-                                        if c[0] == 'x  ' or c[0] ==  azul:
-                                            c[0] = magenta
-
-            for c in tabuleiro:
                 if c[0] == 'o  ' and c[1] == posicao_x-1 and c[2] == posicao_y-1:
                     for c in tabuleiro:
                         if c[0] == '*  ' and c[1] == posicao_x-2 and c[2] == posicao_y-2:
@@ -220,15 +209,21 @@ def computador():
                         if c[0] == '*  ' and c[1] == posicao_x-2 and c[2] == posicao_y-2:
 
                             for c in tabuleiro:
-                                if c[0] == 'o  ' and c[1] == posicao_x - 3 and c[2] == posicao_y - 3:
-                                    for c in tabuleiro:
-                                        if c[0] == '*  ' and c[1] == posicao_x - 4 and c[2] == posicao_y - 4:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] == 'x  ' or c[0] ==  azul:
+                                            c[0] = magenta
 
-                                            for c in tabuleiro:
-                                                if c[1] == posicao_x:
-                                                    if c[2] == posicao_y:
-                                                        if c[0] == 'x  ' or c[0] == magenta:
-                                                            c[0] = verde
+                                        for c in tabuleiro:
+                                            if c[0] == 'o  ' and c[1] == posicao_x - 3 and c[2] == posicao_y - 3:
+                                                for c in tabuleiro:
+                                                    if c[0] == '*  ' and c[1] == posicao_x - 4 and c[2] == posicao_y - 4:
+
+                                                        for c in tabuleiro:
+                                                            if c[1] == posicao_x:
+                                                                if c[2] == posicao_y:
+                                                                    if c[0] == 'x  ' or c[0] == magenta:
+                                                                        c[0] = verde
 
                             for c in tabuleiro:
                                 if c[0] == 'o  ' and c[1] == posicao_x - 3 and c[2] == posicao_y - 1:
