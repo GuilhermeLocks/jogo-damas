@@ -605,9 +605,14 @@ def computador():
 
 
 
+
+
+
+
+
+
     tabuada()
 while True:
     computador()
     jogador()
 
-    
