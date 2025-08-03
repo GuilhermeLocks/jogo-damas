@@ -507,6 +507,9 @@ def computador():
 
 
 
+
+
+
             for c in tabuleiro:
                 if c[0] == 'o  ' and c[1] == posicao_x - 5 and c[2] == posicao_y - 1:
                     for c in tabuleiro:
@@ -600,7 +603,11 @@ def computador():
                                         if c[0] in todos:
                                             c[0] = vermelho
 
+
+
     tabuada()
 while True:
     computador()
     jogador()
+
+    
