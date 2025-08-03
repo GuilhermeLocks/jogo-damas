@@ -603,16 +603,7 @@ def computador():
                                         if c[0] in todos:
                                             c[0] = vermelho
 
-
-
-
-
-
-
-
-
     tabuada()
 while True:
     computador()
     jogador()
-
