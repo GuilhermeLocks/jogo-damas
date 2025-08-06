@@ -630,8 +630,13 @@ def computador():
     tabuada()
 while True:
     computador()
+<<<<<<< HEAD
     for c in tabuleiro:
         if c[0] is vermelho:
             print(c[0])
     jogador()
 
+=======
+    jogador()
+    
+>>>>>>> ec50a574f387bf10ee18291a67d0ec1ab97a0363
