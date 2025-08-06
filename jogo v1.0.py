@@ -8,7 +8,7 @@ verde = '\033[32m2  \033[0m'
 vermelho = '\033[31m3  \033[0m'
 todos = [azul, magenta, verde, vermelho, computador]
 tabuleiro = [
-    ['X  ', 9, 0],
+    ['X   ', 9, 0],
     ['8  ', 8, 0], [fundo_injogavel, 8, 1], [fundo_jogavel, 8, 2], [fundo_injogavel, 8, 3], [fundo_jogavel, 8, 4], [fundo_injogavel, 8, 5], [fundo_jogavel, 8, 6], [fundo_injogavel, 8, 7], [fundo_jogavel, 8, 8],
     ['7  ', 7, 0], [fundo_jogavel, 7, 1], [fundo_injogavel, 7, 2], [fundo_jogavel, 7, 3], [fundo_injogavel, 7, 4], [fundo_jogavel, 7, 5], [fundo_injogavel, 7, 6], [fundo_jogavel, 7, 7], [fundo_injogavel, 7, 8],
     ['6  ', 6, 0], [fundo_injogavel, 6, 1], [fundo_jogavel, 6, 2], [fundo_injogavel, 6, 3], [jogador, 6, 4], [fundo_injogavel, 6, 5], [fundo_jogavel, 6, 6], [fundo_injogavel, 6, 7], [fundo_jogavel, 6, 8],
@@ -16,7 +16,7 @@ tabuleiro = [
     ['4  ', 4, 0], [fundo_injogavel, 4, 1], [fundo_jogavel, 4, 2], [fundo_injogavel, 4, 3], [jogador, 4, 4], [fundo_injogavel, 4, 5], [fundo_jogavel, 4, 6], [fundo_injogavel, 4, 7], [fundo_jogavel, 4, 8],
     ['3  ', 3, 0], [fundo_jogavel, 3, 1], [fundo_injogavel, 3, 2], [fundo_jogavel, 3, 3], [fundo_injogavel, 3, 4], [fundo_jogavel, 3, 5], [fundo_injogavel, 3, 6], [fundo_jogavel, 3, 7], [fundo_injogavel, 3, 8],
     ['2  ', 2, 0], [fundo_injogavel, 2, 1], [jogador, 2, 2], [fundo_injogavel, 2, 3], [fundo_jogavel, 2, 4], [fundo_injogavel, 2, 5], [fundo_jogavel, 2, 6], [fundo_injogavel, 2, 7], [fundo_jogavel, 2, 8],
-    ['1  ', 1, 0], [computador, 1, 1], [fundo_injogavel, 1, 2], [fundo_jogavel, 1, 3], [fundo_injogavel, 1, 4], [fundo_jogavel, 1, 5], [fundo_injogavel, 1, 6], [fundo_jogavel, 1, 7], [fundo_injogavel, 1, 8],
+    ['1  ', 1, 0], [computador, 1, 1], [fundo_injogavel, 1, 2], [computador, 1, 3], [fundo_injogavel, 1, 4], [fundo_jogavel, 1, 5], [fundo_injogavel, 1, 6], [fundo_jogavel, 1, 7], [fundo_injogavel, 1, 8],
     ['0  ', 0, 0],  ['1  ', 0, 0], ['2  ', 0, 0], ['3  ', 0, 0], ['4  ', 0, 0], ['5  ', 0, 0], ['6  ', 0, 0], ['7  ', 0, 0], ['8  ', 0, 0], ['Y  ', 0, 0],                                                                                                                                                     ]
 def tabuada():
     posicao = 0
@@ -630,4 +630,8 @@ def computador():
     tabuada()
 while True:
     computador()
+    for c in tabuleiro:
+        if c[0] is vermelho:
+            print(c[0])
     jogador()
+
