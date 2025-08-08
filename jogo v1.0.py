@@ -6,7 +6,8 @@ azul = '\033[34m0  \033[0m'
 magenta = '\033[35m1  \033[0m'
 verde = '\033[32m2  \033[0m'
 vermelho = '\033[31m3  \033[0m'
-todos = [azul, magenta, verde, vermelho, computador]
+amarelo = '\033[33m4  \033[0m'
+todos = [azul, magenta, verde, vermelho,amarelo, computador]
 tabuleiro = [
     ['X   ', 9, 0],
     ['8  ', 8, 0], [fundo_injogavel, 8, 1], [fundo_jogavel, 8, 2], [fundo_injogavel, 8, 3], [fundo_jogavel, 8, 4], [fundo_injogavel, 8, 5], [fundo_jogavel, 8, 6], [fundo_injogavel, 8, 7], [fundo_jogavel, 8, 8],
@@ -627,16 +628,299 @@ def computador():
                                         if c[0] in todos:
                                             c[0] = vermelho
 
+    # verificar posições que pega 3 peças e deixa amarelo
+    for c in tabuleiro:
+        if c[0] in todos:
+            posicao_x = c[1]
+            posicao_y = c[2]
+
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x - 1 and c[2] == posicao_y - 5:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x - 2 and c[2] == posicao_y - 6:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x + 1 and c[2] == posicao_y - 5:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x + 2 and c[2] == posicao_y - 6:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x + 1 and c[2] == posicao_y - 3:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x + 2 and c[2] == posicao_y - 2:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x - 5 and c[2] == posicao_y - 3:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x - 6 and c[2] == posicao_y - 2:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x - 5 and c[2] == posicao_y - 5:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x - 6 and c[2] == posicao_y - 6:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x - 3 and c[2] == posicao_y - 5:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x - 2 and c[2] == posicao_y - 6:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x - 5 and c[2] == posicao_y - 1:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x - 6 and c[2] == posicao_y - 2:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x - 5 and c[2] == posicao_y + 1:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x - 6 and c[2] == posicao_y + 2:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x - 3 and c[2] == posicao_y + 1:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x - 2 and c[2] == posicao_y + 2:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x - 5 and c[2] == posicao_y + 3:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x - 6 and c[2] == posicao_y + 2:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x - 5 and c[2] == posicao_y + 5:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x - 6 and c[2] == posicao_y + 6:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x - 3 and c[2] == posicao_y + 5:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x - 2 and c[2] == posicao_y + 6:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x - 1 and c[2] == posicao_y + 5:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x - 2 and c[2] == posicao_y + 6:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x + 1 and c[2] == posicao_y + 5:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x + 2 and c[2] == posicao_y + 6:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x + 1 and c[2] == posicao_y + 3:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x + 2 and c[2] == posicao_y + 2:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x + 3 and c[2] == posicao_y + 5:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x + 2 and c[2] == posicao_y + 6:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x + 5 and c[2] == posicao_y + 5:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x + 6 and c[2] == posicao_y + 6:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x + 5 and c[2] == posicao_y + 3:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x + 6 and c[2] == posicao_y + 2:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x + 5 and c[2] == posicao_y + 1:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x + 6 and c[2] == posicao_y + 2:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x + 5 and c[2] == posicao_y - 1:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x + 6 and c[2] == posicao_y - 2:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x + 3 and c[2] == posicao_y - 1:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x + 2 and c[2] == posicao_y - 2:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x + 3 and c[2] == posicao_y + 1:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x + 2 and c[2] == posicao_y + 2:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x + 5 and c[2] == posicao_y + 1:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x + 6 and c[2] == posicao_y + 2:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x + 5 and c[2] == posicao_y - 1:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x + 6 and c[2] == posicao_y - 2:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x + 5 and c[2] == posicao_y - 3:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x + 6 and c[2] == posicao_y - 2:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x + 5 and c[2] == posicao_y - 5:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x + 6 and c[2] == posicao_y - 6:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+            for c in tabuleiro:
+                if c[0] == 'o  ' and c[1] == posicao_x + 3 and c[2] == posicao_y - 5:
+                    for c in tabuleiro:
+                        if c[0] == '*  ' and c[1] == posicao_x + 2 and c[2] == posicao_y - 6:
+
+                            for c in tabuleiro:
+                                if c[1] == posicao_x:
+                                    if c[2] == posicao_y:
+                                        if c[0] in todos:
+                                            c[0] = vermelho
+
     tabuada()
+
 while True:
+    
     computador()
-<<<<<<< HEAD
+
     for c in tabuleiro:
         if c[0] is vermelho:
             print(c[0])
-    jogador()
 
-=======
     jogador()
-    
->>>>>>> ec50a574f387bf10ee18291a67d0ec1ab97a0363
