@@ -924,3 +924,6 @@ while True:
             print(c[0])
 
     jogador()
+    
+    
+    
