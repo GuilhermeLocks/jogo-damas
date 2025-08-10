@@ -1,4 +1,4 @@
-fundo_jogavel = '*  '
+#fundo_jogavel = '*  '
 fundo_injogavel = '=  '
 jogador = 'o  '
 computador = 'x  '
@@ -924,6 +924,8 @@ while True:
             print(c[0])
 
     jogador()
+    
+    
     
     
     
