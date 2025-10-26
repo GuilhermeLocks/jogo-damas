@@ -1,4 +1,4 @@
-#fundo_jogavel = '*  '
+fundo_jogavel = '*  '
 fundo_injogavel = '=  '
 jogador = 'o  '
 computador = 'x  '
