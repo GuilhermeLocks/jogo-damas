@@ -7,27 +7,19 @@ magenta = '\033[35m1  \033[0m'
 verde = '\033[32m2  \033[0m'
 vermelho = '\033[31m3  \033[0m'
 amarelo = '\033[33m4  \033[0m'
+lista_magenta = []
 todos = [azul, magenta, verde, vermelho, amarelo, computador]
 tabuleiro = [
     ['X   ', 9, 0],
-    ['8  ', 8, 0], [fundo_injogavel, 8, 1], [fundo_jogavel, 8, 2], [fundo_injogavel, 8, 3], [computador, 8, 4],
-    [fundo_injogavel, 8, 5], [fundo_jogavel, 8, 6], [fundo_injogavel, 8, 7], [fundo_jogavel, 8, 8],
-    ['7  ', 7, 0], [fundo_jogavel, 7, 1], [fundo_injogavel, 7, 2], [fundo_jogavel, 7, 3], [fundo_injogavel, 7, 4],
-    [fundo_jogavel, 7, 5], [fundo_injogavel, 7, 6], [fundo_jogavel, 7, 7], [fundo_injogavel, 7, 8],
-    ['6  ', 6, 0], [fundo_injogavel, 6, 1], [fundo_jogavel, 6, 2], [fundo_injogavel, 6, 3], [jogador, 6, 4],
-    [fundo_injogavel, 6, 5], [fundo_jogavel, 6, 6], [fundo_injogavel, 6, 7], [fundo_jogavel, 6, 8],
-    ['5  ', 5, 0], [fundo_jogavel, 5, 1], [fundo_injogavel, 5, 2], [fundo_jogavel, 5, 3], [fundo_injogavel, 5, 4],
-    [fundo_jogavel, 5, 5], [fundo_injogavel, 5, 6], [fundo_jogavel, 5, 7], [fundo_injogavel, 5, 8],
-    ['4  ', 4, 0], [fundo_injogavel, 4, 1], [fundo_jogavel, 4, 2], [fundo_injogavel, 4, 3], [jogador, 4, 4],
-    [fundo_injogavel, 4, 5], [fundo_jogavel, 4, 6], [fundo_injogavel, 4, 7], [fundo_jogavel, 4, 8],
-    ['3  ', 3, 0], [fundo_jogavel, 3, 1], [fundo_injogavel, 3, 2], [fundo_jogavel, 3, 3], [fundo_injogavel, 3, 4],
-    [fundo_jogavel, 3, 5], [fundo_injogavel, 3, 6], [fundo_jogavel, 3, 7], [fundo_injogavel, 3, 8],
-    ['2  ', 2, 0], [fundo_injogavel, 2, 1], [jogador, 2, 2], [fundo_injogavel, 2, 3], [fundo_jogavel, 2, 4],
-    [fundo_injogavel, 2, 5], [fundo_jogavel, 2, 6], [fundo_injogavel, 2, 7], [fundo_jogavel, 2, 8],
-    ['1  ', 1, 0], [computador, 1, 1], [fundo_injogavel, 1, 2], [computador, 1, 3], [fundo_injogavel, 1, 4],
-    [fundo_jogavel, 1, 5], [fundo_injogavel, 1, 6], [fundo_jogavel, 1, 7], [fundo_injogavel, 1, 8],
-    ['0  ', 0, 0], ['1  ', 0, 0], ['2  ', 0, 0], ['3  ', 0, 0], ['4  ', 0, 0], ['5  ', 0, 0], ['6  ', 0, 0],
-    ['7  ', 0, 0], ['8  ', 0, 0], ['Y  ', 0, 0], ]
+    ['8  ', 8, 0], [fundo_injogavel, 8, 1], [computador, 8, 2], [fundo_injogavel, 8, 3], [computador, 8, 4], [fundo_injogavel, 8, 5], [computador, 8, 6], [fundo_injogavel, 8, 7], [computador, 8, 8],
+    ['7  ', 7, 0], [computador, 7, 1], [fundo_injogavel, 7, 2], [computador, 7, 3], [fundo_injogavel, 7, 4], [computador, 7, 5], [fundo_injogavel, 7, 6], [computador, 7, 7], [fundo_injogavel, 7, 8],
+    ['6  ', 6, 0], [fundo_injogavel, 6, 1], [computador, 6, 2], [fundo_injogavel, 6, 3], [computador, 6, 4], [fundo_injogavel, 6, 5], [computador, 6, 6], [fundo_injogavel, 6, 7], [computador, 6, 8],
+    ['5  ', 5, 0], [fundo_jogavel, 5, 1], [fundo_injogavel, 5, 2], [jogador, 5, 3], [fundo_injogavel, 5, 4], [fundo_jogavel, 5, 5], [fundo_injogavel, 5, 6], [fundo_jogavel, 5, 7], [fundo_injogavel, 5, 8],
+    ['4  ', 4, 0], [fundo_injogavel, 4, 1], [fundo_jogavel, 4, 2], [fundo_injogavel, 4, 3], [fundo_jogavel, 4, 4],  [fundo_injogavel, 4, 5], [fundo_jogavel, 4, 6], [fundo_injogavel, 4, 7], [fundo_jogavel, 4, 8],
+    ['3  ', 3, 0], [jogador, 3, 1], [fundo_injogavel, 3, 2], [jogador, 3, 3], [fundo_injogavel, 3, 4],  [jogador, 3, 5], [fundo_injogavel, 3, 6], [jogador, 3, 7], [fundo_injogavel, 3, 8],
+    ['2  ', 2, 0], [fundo_injogavel, 2, 1], [jogador, 2, 2], [fundo_injogavel, 2, 3], [jogador, 2, 4], [fundo_injogavel, 2, 5], [jogador, 2, 6], [fundo_injogavel, 2, 7], [jogador, 2, 8],
+    ['1  ', 1, 0], [jogador, 1, 1], [fundo_injogavel, 1, 2], [jogador, 1, 3], [fundo_injogavel, 1, 4], [jogador, 1, 5], [fundo_injogavel, 1, 6], [jogador, 1, 7], [fundo_injogavel, 1, 8],
+    ['0  ', 0, 0], ['1  ', 0, 0], ['2  ', 0, 0], ['3  ', 0, 0], ['4  ', 0, 0], ['5  ', 0, 0], ['6  ', 0, 0],  ['7  ', 0, 0], ['8  ', 0, 0], ['Y  ', 0, 0], ]
 
 def tabuada():
     posicao = 0
@@ -120,9 +112,11 @@ def jogador():
                 if c[2] == posicao_y2:
                     if c[0] == fundo_jogavel:
                         c[0] = 'o  '
-                        break
+                        jogada_2 = 1
                     else:
-                        print('Espaço injogavel ')
+                        print(f'Espaço injogavel ')
+                        print(f'x1 : {posicao_x1}, x2 : {posicao_x2}, y1 : {posicao_y1}, y2 : {posicao_y2}')
+                        print(f'c[1]: {c[1]}, c[2]: {c[2]}. c[0]: {c[0]}, fundo: {fundo_jogavel}')
 
 
     for c in tabuleiro:
@@ -143,11 +137,47 @@ def computador():
             c[0] = 'x  '
 
     for c in tabuleiro:
-        if c[0] == 'x  ':
-            print(c)
 
-    tabuada()
+        tabuleiro_reserva = tabuleiro.copy()
+
+        if c[0] == 'x  ':
+
+            for v in tabuleiro:
+
+                if c[1] - 1 == v[1] and c[2] - 1 == v[2] and v[0] == '*  ':
+                    c[0] = azul
+                if c[1] - 1 == v[1] and c[2] + 1 == v[2] and v[0] == '*  ':
+                    c[0] = azul
+                if c[1] + 1 == v[1] and c[2] - 1 == v[2] and v[0] == '*  ':
+                    c[0] = azul
+                if c[1] + 1 == v[1] and c[2] + 1 == v[2] and v[0] == '*  ':
+                    c[0] = azul
+
+            for v in tabuleiro:
+
+                if c[1] - 1 == v[1] and c[2] - 1 == v[2] and v[0] == 'o  ':
+                    for v in tabuleiro:
+                        if c[1] - 2 == v[1] and c[2] - 2 == v[2] and v[0] == '*  ' :
+                            c[0] = magenta
+
+                if c[1] - 1 == v[1] and c[2] + 1 == v[2] and v[0] == 'o  ':
+                    for v in tabuleiro:
+                        if c[1] - 2 == v[1] and c[2] + 2 == v[2] and v[0] == '*  ':
+                            c[0] = magenta
+
+                if c[1] + 1 == v[1] and c[2] - 1 == v[2] and v[0] == 'o  ':
+                    for v in tabuleiro:
+                        if c[1] + 2 == v[1] and c[2] - 2 == v[2] and v[0] == '*  ':
+                            c[0] = magenta
+
+                if c[1] + 1 == v[1] and c[2] + 1 == v[2] and v[0] == 'o  ':
+                    for v in tabuleiro:
+                        if c[1] + 2 == v[1] and c[2] + 2 == v[2] and v[0] == '*  ':
+                            c[0] = magenta
 
 while True:
+    tabuada()
+
+    jogador()
+
     computador()
-    break
