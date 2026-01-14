@@ -123,20 +123,22 @@ def computador():
     for c in tabuleiro:
         if c[0] == 'x  ' and jogada == 0:
 
-            for v in tabuleiro:
-                if c[1] - 1 == v[1] and c[2] - 1 == v[2] and v[0] == 'o  ' and jogada == 0:
-                    v[0] = fundo_jogavel
+            for jogador in tabuleiro:
+                if c[1] - 1 == jogador[1] and c[2] - 1 == jogador[2] and v[0] == 'o  ' and jogada == 0:
+                    jogador[0] = fundo_jogavel
+
                     for v in tabuleiro:
                         if c[1] - 2 == v[1] and c[2] - 2 == v[2] and v[0] == '*  ' :
 
                             for v in tabuleiro:
                                 if c[1] - 3 == v[1] and c[2] - 3 == v[2] and v[0] == 'o  ' and jogada == 0:
                                     v[0] = fundo_jogavel
+
                                     for v in tabuleiro:
                                         if c[1] - 4 == v[1] and c[2] - 4 == v[2] and v[0] == '*  ':
 
-                                            c[0] = '*  '
-                                            v[0] = 'x  '
+                                            c[0] = '*  1'
+                                            v[0] = 'x  1'
                                             jogada += 1
                                             break
 
@@ -145,8 +147,8 @@ def computador():
                                     v[0] = fundo_jogavel
                                     for v in tabuleiro:
                                         if c[1] - 4 == v[1] and c[2] - 0 == v[2] and v[0] == '*  ':
-                                            c[0] = '*  '
-                                            v[0] = 'x  '
+                                            c[0] = '*  2'
+                                            v[0] = 'x  2'
                                             jogada += 1
                                             break
 
@@ -155,50 +157,48 @@ def computador():
                                     v[0] = fundo_jogavel
                                     for v in tabuleiro:
                                         if c[1] - 0 == v[1] and c[2] - 4 == v[2] and v[0] == '*  ':
-                                            c[0] = '*  '
-                                            v[0] = 'x  '
+                                            c[0] = '*  3'
+                                            v[0] = 'x  3'
                                             jogada += 1
                                             break
 
-
-
     for c in tabuleiro:
         if c[0] == 'x  ' and jogada == 0:
 
             for v in tabuleiro:
-                if c[1] - 1 == v[1] and c[2] - 1 == v[2] and v[0] == 'o  ':
+                if c[1] - 1 == v[1] and c[2] - 1 == v[2] and v[0] == 'o  ' and jogada == 0:
                     v[0] = fundo_jogavel
                     for v in tabuleiro:
                         if c[1] - 2 == v[1] and c[2] - 2 == v[2] and v[0] == '*  ' :
-                            c[0] = '*  '
-                            v[0] = 'x  '
+                            c[0] = '*  4'
+                            v[0] = 'x  4'
                             jogada += 1
                             break
 
-                if c[1] - 1 == v[1] and c[2] + 1 == v[2] and v[0] == 'o  ':
+                if c[1] - 1 == v[1] and c[2] + 1 == v[2] and v[0] == 'o  ' and jogada == 0:
                     v[0] = fundo_jogavel
                     for v in tabuleiro:
                         if c[1] - 2 == v[1] and c[2] + 2 == v[2] and v[0] == '*  ':
-                            c[0] = '*  '
-                            v[0] = 'x  '
+                            c[0] = '*  5'
+                            v[0] = 'x  5'
                             jogada += 1
                             break
 
-                if c[1] + 1 == v[1] and c[2] - 1 == v[2] and v[0] == 'o  ':
+                if c[1] + 1 == v[1] and c[2] - 1 == v[2] and v[0] == 'o  ' and jogada == 0:
                     v[0] = fundo_jogavel
                     for v in tabuleiro:
                         if c[1] + 2 == v[1] and c[2] - 2 == v[2] and v[0] == '*  ':
-                            c[0] = '*  '
-                            v[0] = 'x  '
+                            c[0] = '*  6'
+                            v[0] = 'x  6'
                             jogada += 1
                             break
 
-                if c[1] + 1 == v[1] and c[2] + 1 == v[2] and v[0] == 'o  ':
+                if c[1] + 1 == v[1] and c[2] + 1 == v[2] and v[0] == 'o  ' and jogada == 0:
                     v[0] = fundo_jogavel
                     for v in tabuleiro:
                         if c[1] + 2 == v[1] and c[2] + 2 == v[2] and v[0] == '*  ':
-                            c[0] = '*  '
-                            v[0] = 'x  '
+                            c[0] = '*  7'
+                            v[0] = 'x  7'
                             jogada += 1
                             break
 
@@ -206,24 +206,24 @@ def computador():
         if c[0] == 'x  ' and jogada == 0:
 
             for v in tabuleiro:
-                if c[1] - 1 == v[1] and c[2] - 1 == v[2] and v[0] == '*  ':
-                    c[0] = '*  '
-                    v[0] = 'x  '
+                if c[1] - 1 == v[1] and c[2] - 1 == v[2] and v[0] == '*  ' and jogada == 0:
+                    c[0] = '*  8'
+                    v[0] = 'x  8'
                     jogada += 1
                     break
-                if c[1] - 1 == v[1] and c[2] + 1 == v[2] and v[0] == '*  ':
-                    c[0] = '*  '
-                    v[0] = 'x  '
+                if c[1] - 1 == v[1] and c[2] + 1 == v[2] and v[0] == '*  ' and jogada == 0:
+                    c[0] = '*  9'
+                    v[0] = 'x  9'
                     jogada += 1
                     break
-                if c[1] + 1 == v[1] and c[2] - 1 == v[2] and v[0] == '*  ':
-                    c[0] = '*  '
-                    v[0] = 'x  '
+                if c[1] + 1 == v[1] and c[2] - 1 == v[2] and v[0] == '*  ' and jogada == 0:
+                    c[0] = '*  10'
+                    v[0] = 'x  10'
                     jogada += 1
                     break
-                if c[1] + 1 == v[1] and c[2] + 1 == v[2] and v[0] == '*  ':
-                    c[0] = '*  '
-                    v[0] = 'x  '
+                if c[1] + 1 == v[1] and c[2] + 1 == v[2] and v[0] == '*  ' and jogada == 0:
+                    c[0] = '*  11'
+                    v[0] = 'x  11'
                     jogada += 1
                     break
 
