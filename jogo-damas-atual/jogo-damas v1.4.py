@@ -146,12 +146,14 @@ def computador():
         if c[0] == 'x  ':
 
             for v in tabuleiro:
+
                 if c[1] - 1 == v[1] and c[2] - 1 == v[2] and v[0] == 'o  ':
                     for v in tabuleiro:
                         if c[1] - 2 == v[1] and c[2] - 2 == v[2] and v[0] == '*  ' :
                             if c[3] == 0:
                                 v = c[:]
                                 v[3] += 1
+                                v.append('<v')
                                 if v not in movimento:
                                     movimento.append(v)
                             break
@@ -162,6 +164,7 @@ def computador():
                             if c[3] == 0:
                                 v = c[:]
                                 v[3] += 1
+                                v.append('>v')
                                 if v not in movimento:
                                     movimento.append(v)
                             break
@@ -172,6 +175,7 @@ def computador():
                             if c[3] == 0:
                                 v = c[:]
                                 v[3] += 1
+                                v.append('<^')
                                 if v not in movimento:
                                     movimento.append(v)
                             break
@@ -182,22 +186,29 @@ def computador():
                             if c[3] == 0:
                                 v = c[:]
                                 v[3] += 1
+                                v.append('>^')
                                 if v not in movimento:
                                     movimento.append(v)
                             break
 
-    for c in movimento:
-        print(c)
-
     print()
 
-    for movi in movimento:
-        if movi[3] == 1:
-            print(movi)
+    for b in movimento:
+        for c in tabuleiro:
+            if c[0] == b[0] and c[1] == b[1] and c[2] == b[2] and b[3] != 0:
+                if b[4] == '<v':
+                    print(b)
+                if b[4] == '>v':
+                    print(b)
+                if b[4] == '<^':
+                    print(b)
+                if b[4] == '<^':
+                    print(b)
+
+
 
 
 while True:
     tabuada()
     jogada()
     computador()
-    tabuada()
