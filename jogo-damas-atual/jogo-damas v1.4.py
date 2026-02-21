@@ -1,3 +1,5 @@
+import os
+
 fundo_jogavel = '*  '
 fundo_injogavel = '=  '
 jogador = 'o  '
@@ -16,6 +18,7 @@ tabuleiro = [
     ['0  ', 0, 0, 0], ['1  ', 0, 0, 0], ['2  ', 0, 0, 0], ['3  ', 0, 0, 0], ['4  ', 0, 0, 0], ['5  ', 0, 0, 0], ['6  ', 0, 0, 0],  ['7  ', 0, 0, 0], ['8  ', 0, 0, 0], ['Y  ', 0, 0, 0], ]
 
 def tabuada():
+    os.system('cls')
     posicao = 0
     for c in tabuleiro:
         if posicao != c[1]:
@@ -72,8 +75,6 @@ def jogada():
     jogada_2 = 0
 
     while jogada_2 == 0:
-        print('')
-        print('')
 
         while True:
             while True:
@@ -204,9 +205,6 @@ def computador():
                     print(b)
                 if b[4] == '<^':
                     print(b)
-
-
-
 
 while True:
     tabuada()
