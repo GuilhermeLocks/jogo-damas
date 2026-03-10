@@ -207,6 +207,9 @@ def computador():
                     print(b)
 
 while True:
+
     tabuada()
+
     jogada()
+
     computador()
